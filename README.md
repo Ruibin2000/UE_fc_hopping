@@ -1,6 +1,6 @@
 # UE_fc_hopping
 The repo shows the sample code for UE based Rxs frequency hopping project. The project will contain two parts: ray-tracing simulation and the Reinforcement Learning. 
 
-In the ray-tracing part, the UE model configuration file and the metal mody file is included. Meanwhile, the "engine" file will contain the integrated simulator env with parameters and the new defined antenna pattern by 3gpp. Another jupyter notebook is uploaded as the demo main functions. The results are stored in the folder "results_practical"
+In the ray-tracing part, the UE model configuration file [UE2_config.py](./Ray-tracing%20Simulator/UE2_config.py) including the antenna location and rotation function, and the metal mody file [UE2.ply](./Ray-tracing%20Simulator/UE2.ply) is included. Meanwhile, the "engine" file will contain the integrated simulator env with parameters and the new defined antenna pattern by 3gpp (the class is define in file [Engine_UE2_config.py](./Ray-tracing%20Simulator/Engine_UE2_config.py)). Another jupyter notebook is uploaded as the demo main functions [test_location_engine.ipynb](./Ray-tracing%20Simulator/test_location_engine.ipynb). The results are stored in the folder "results_practical"
 
-The route of the UE is calculated seperately in another random walk program. The random walk routes is stored as the json file in folder "routes".
+The route of the UE is calculated seperately in another random walk program. The random walk routes is stored as the json file in folder "routes". [test_boundary.ipynb](./Ray-tracing%20Simulator/test_boundary.ipynb) contains the code for random walk algorithm to generate the routes.
