@@ -30,19 +30,19 @@ class UE2:
 
         # new patch pattern
         self.rx1_loc_pos = np.array([-0.036,0.075,0]) * self.scaling
-        self.rx1_loc_oritation = np.array([np.pi,0,0])
+        self.rx1_loc_orientation = np.array([np.pi,0,0])
 
         # new patch pattern
         self.rx2_loc_pos = np.array([0.036,-0.075,0]) * self.scaling
-        self.rx2_loc_oritation = np.array([0,0,0])
+        self.rx2_loc_orientation = np.array([0,0,0])
 
         # dipole
         self.rx3_loc_pos = np.array([0.036,0,0]) * self.scaling
-        self.rx3_loc_oritation = np.array([0,0,0])
+        self.rx3_loc_orientation = np.array([0,0,0])
 
         # dipole
         self.rx4_loc_pos = np.array([-0.036,0,0]) * self.scaling
-        self.rx4_loc_oritation = np.array([0,0,0])
+        self.rx4_loc_orientation = np.array([0,0,0])
 
 
         self.ue_material = material
@@ -50,22 +50,22 @@ class UE2:
         # Create a tr38901 12G receiver
         self.rx1 = Receiver(name="rx-1",
                     position=self.center_pos + self.rx1_loc_pos,
-                    orientation=self.rx1_loc_oritation,
+                    orientation=self.rx1_loc_orientation,
                     display_radius=2)
         self.rx2 = Receiver(name="rx-2",
                     position=self.center_pos + self.rx2_loc_pos,
-                    orientation=self.rx2_loc_oritation,
+                    orientation=self.rx2_loc_orientation,
                     display_radius=2)
         
         # Create a dipole 6G receiver
         self.rx3 = Receiver(name="rx-3",
                     position=self.center_pos + self.rx3_loc_pos,
-                    orientation=self.rx3_loc_oritation,
+                    orientation=self.rx3_loc_orientation,
                     display_radius=2)
         
         self.rx4 = Receiver(name="rx-4",
                     position=self.center_pos + self.rx4_loc_pos,
-                    orientation=self.rx4_loc_oritation,
+                    orientation=self.rx4_loc_orientation,
                     display_radius=2)
 
 
@@ -94,10 +94,10 @@ class UE2:
 
         self.body.orientation = np.array([0, 0, 0])
 
-        self.rx1.orientation = self.rx1_loc_oritation
-        self.rx2.orientation = self.rx2_loc_oritation
-        self.rx3.orientation = self.rx3_loc_oritation
-        self.rx4.orientation = self.rx4_loc_oritation
+        self.rx1.orientation = self.rx1_loc_orientation
+        self.rx2.orientation = self.rx2_loc_orientation
+        self.rx3.orientation = self.rx3_loc_orientation
+        self.rx4.orientation = self.rx4_loc_orientation
         
     def set_location(self,displacement):
         # Update the position of the object
@@ -145,10 +145,10 @@ class UE2:
 
 
         self.body.orientation = np.array([alpha, beta, gamma])
-        self.rx1.orientation = self.rx1_loc_oritation + np.array([alpha, beta, gamma])
-        self.rx2.orientation = self.rx2_loc_oritation + np.array([alpha, beta, gamma])
-        self.rx3.orientation = self.rx3_loc_oritation + np.array([alpha, beta, gamma])
-        self.rx4.orientation = self.rx4_loc_oritation + np.array([alpha, beta, gamma])
+        self.rx1.orientation = self.rx1_loc_orientation + np.array([alpha, beta, gamma])
+        self.rx2.orientation = self.rx2_loc_orientation + np.array([alpha, beta, gamma])
+        self.rx3.orientation = self.rx3_loc_orientation + np.array([alpha, beta, gamma])
+        self.rx4.orientation = self.rx4_loc_orientation + np.array([alpha, beta, gamma])
         R = self.R_matrix(alpha, beta, gamma)
         
 
