@@ -16,9 +16,11 @@ Performs one step in the environment using the provided `action`.
 
 - **Returns**
   - `obs`(`[0:8]`): The observation (or state) after taking the action. This could be a vector, image, or other structured data.
-  - `r` (`float`): The reward received for taking the action. max of obs[4:8] * action[0:4]
+  - `r` (`float`): The reward received for taking the action. max of obs[4:8] * action[0:4] + **Energy Consumption**
   - `done` (`bool`): A flag indicating whether the episode has ended (`True` if terminal).
   - `info` (`dict`): Optional diagnostic information (e.g., environment metrics or debugging data). Does **not** affect learning.
+
+`* question: how to define Energy Consumption, value?`  
 
 ---
 
