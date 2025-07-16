@@ -12,10 +12,10 @@ This environment follows a standard reinforcement learning (RL) interface for in
 Performs one step in the environment using the provided `action`.
 
 - **Parameters**
-  - `action` (`Any`): The action to take in the environment. The expected type and format depend on the environment's action space.
+  - `action` (`[0:4] array`): The action to take in the environment. The expected type and format depend on the environment's action space.
 
 - **Returns**
-  - `obs`(`[0:8]`): The observation (or state) after taking the action. This could be a vector, image, or other structured data.
+  - `obs`(`[0:8] array`): The observation (or state) after taking the action. This could be a vector, image, or other structured data.
   - `r` (`float`): The reward received for taking the action. max of obs[4:8] * action[0:4] + **Energy Consumption**
   - `done` (`bool`): A flag indicating whether the episode has ended (`True` if terminal).
   - `info` (`dict`): Optional diagnostic information (e.g., environment metrics or debugging data). Does **not** affect learning.
