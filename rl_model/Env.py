@@ -35,7 +35,7 @@ class Env:
 
 
 def main():
-    env = Env('train_data/51_s2_2_hgain_10mps_seed40_30s.json', 'train_data/51_s2_2_rate_10mps_seed40_30s.json')
+    env = Env('train_data/51_s2_2_snr_10mps_seed40_30s.json', 'train_data/51_s2_2_rate_10mps_seed40_30s.json')
     
     obs, done, info = env.reset()
 
