@@ -5,6 +5,7 @@ import torch
 import torch.nn.functional as F
 from torch.distributions import Categorical
 from torch.utils.tensorboard import SummaryWriter
+from model_collections import best_obs_minus_wE_torch
 
 from ppo_discrete import PPO
 from Env import Env
