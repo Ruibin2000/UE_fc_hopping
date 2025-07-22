@@ -28,7 +28,7 @@ class UE2:
 
         self.center_pos = np.array([0,0,0]) * self.scaling
 
-        # new patch pattern
+        # new patch pattern - 15 GHz
         self.rx1_loc_pos = np.array([-0.036,0.075,0]) * self.scaling
         self.rx1_loc_orientation = np.array([np.pi,0,0])
 
@@ -36,7 +36,7 @@ class UE2:
         self.rx2_loc_pos = np.array([0.036,-0.075,0]) * self.scaling
         self.rx2_loc_orientation = np.array([0,0,0])
 
-        # dipole
+        # dipole    - 3.5 GHz
         self.rx3_loc_pos = np.array([0.036,0,0]) * self.scaling
         self.rx3_loc_orientation = np.array([0,0,0])
 
